@@ -1,0 +1,1 @@
+DEEPLINK_WALLET  =  "picpay://picpay/insurance/acquisition/simulation"

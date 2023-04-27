@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230427 16:54:12.300" rpa="false" schemaversion="3">
+<suite id="s1" name="Wallet" source="/Users/willianmaesato/Robot/robotframework-appium-sample/tests/Wallet/Wallet.robot">
+<test id="s1-t1" name="Login App PicPay" line="10">
+<kw name="Start Screen Recording" library="AppiumLibrary">
+<doc>Starts an asynchronous Screen Recording for the current open application.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230427 16:54:12.425" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.425" endtime="20230427 16:54:12.431"/>
+</kw>
+<msg timestamp="20230427 16:54:12.433" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.433" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.424" endtime="20230427 16:54:12.433"/>
+</kw>
+<kw name="Open Android PicPay App" library="resource">
+<doc>Este caso de teste valida a inicialização do App do PicPay</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.434" endtime="20230427 16:54:12.434"/>
+</kw>
+<kw name="Click Enter Login" library="LoginPage">
+<doc>Este caso de teste clica no Botão login para usuário colocar CPF e Senha</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.434" endtime="20230427 16:54:12.434"/>
+</kw>
+<kw name="Input Login CPF" library="LoginPage">
+<doc>Este caso de teste coloca o CPF do usuário 77561838514</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.434" endtime="20230427 16:54:12.434"/>
+</kw>
+<kw name="Input Login Password" library="LoginPage">
+<doc>Este caso de teste coloca a senha do usuário</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.434" endtime="20230427 16:54:12.434"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<doc>Este caso de teste clica no login para acessar o PicPay App</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.434" endtime="20230427 16:54:12.434"/>
+</kw>
+<kw name="Click Not Now Biometri Authenticator" library="LoginPage">
+<doc>Este caso de teste clica no Botão "Agora não" para usuário acessar o aplicativo e usar ele com a senha do App</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.435" endtime="20230427 16:54:12.435"/>
+</kw>
+<kw name="Click Ok Undestand Pix" library="LoginPage">
+<doc>Esta caso de teste aguarda a tela de explicação do Pix abrir e clica em no botão "Ok, entendi"</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.435" endtime="20230427 16:54:12.435"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.424" endtime="20230427 16:54:12.435">No application is open</status>
+</test>
+<test id="s1-t2" name="Open Wallet Insurance and Validate Combo Product Prices" line="20">
+<kw name="Open Wallet" library="SimulationPage">
+<doc>Este caso de teste irá disparar um deeplink do carteira para poder abrir no App PicPay</doc>
+<kw name="Send Deeplink Picpay" library="CommandsPage">
+<arg>${DEEPLINK_WALLET}</arg>
+<kw name="Execute Adb Shell" library="AppiumLibrary">
+<arg>am start -a android.intent.action.VIEW -d "${deeplink}"</arg>
+<doc>Execute ADB shell commands</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230427 16:54:12.437" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.436" endtime="20230427 16:54:12.444"/>
+</kw>
+<msg timestamp="20230427 16:54:12.445" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.446" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.436" endtime="20230427 16:54:12.447"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.436" endtime="20230427 16:54:12.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${SimulationScreen}</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.447" endtime="20230427 16:54:12.447"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.447" endtime="20230427 16:54:12.447"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.447" endtime="20230427 16:54:12.447"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.435" endtime="20230427 16:54:12.447"/>
+</kw>
+<kw name="Scroll Down Wallet Screen At End" library="SimulationPage">
+<doc>Este caso de teste irá rolar a tela até o final dela</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.448" endtime="20230427 16:54:12.448"/>
+</kw>
+<kw name="Validate Prices Combo" library="SimulationPage">
+<doc>Este caso de teste irá validar os preços dos combos e se estão com os valores corretos</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.448" endtime="20230427 16:54:12.448"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.435" endtime="20230427 16:54:12.449">No application is open</status>
+</test>
+<test id="s1-t3" name="Open General Conditions" line="25">
+<kw name="Open General Conditions" library="SimulationPage">
+<doc>Este caso de teste irá abrir as condições gerais</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SimulationGeneralConditions}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230427 16:54:12.451" level="INFO">Clicking element '//android.widget.TextView[@resource-id='com.picpay.debug:id/tvPaymentDisclaimer']'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230427 16:54:12.451" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.451" endtime="20230427 16:54:12.454"/>
+</kw>
+<msg timestamp="20230427 16:54:12.456" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.456" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.449" endtime="20230427 16:54:12.457"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.457" endtime="20230427 16:54:12.457"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.457" endtime="20230427 16:54:12.457"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${GeneralConditionsOkUnderstandButton}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.457" endtime="20230427 16:54:12.457"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.449" endtime="20230427 16:54:12.457"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.449" endtime="20230427 16:54:12.458">No application is open</status>
+</test>
+<test id="s1-t4" name="Hire Wallet Insurance" line="28">
+<kw name="Receipt Wallet Insurance" library="SimulationPage">
+<doc>Este caso de teste irá mostrar a tela de recibo</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ReceiptWalletInsuranceScreen}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230427 16:54:12.460" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.459" endtime="20230427 16:54:12.461"/>
+</kw>
+<msg timestamp="20230427 16:54:12.462" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.463" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230427 16:54:12.459" endtime="20230427 16:54:12.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.463" endtime="20230427 16:54:12.463"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.463" endtime="20230427 16:54:12.463"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.459" endtime="20230427 16:54:12.464"/>
+</kw>
+<kw name="Stop Screen Recording" library="AppiumLibrary">
+<doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
+<status status="NOT RUN" starttime="20230427 16:54:12.464" endtime="20230427 16:54:12.464"/>
+</kw>
+<status status="FAIL" starttime="20230427 16:54:12.458" endtime="20230427 16:54:12.464">No application is open</status>
+</test>
+<status status="FAIL" starttime="20230427 16:54:12.302" endtime="20230427 16:54:12.465"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="4" skip="0" id="s1" name="Wallet">Wallet</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230427 16:54:12.433" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.445" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.456" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230427 16:54:12.462" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

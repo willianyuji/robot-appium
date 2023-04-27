@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230124 12:54:45.863" rpa="false" schemaversion="3">
+<suite id="s1" name="Open Application" source="/Users/willianmaesato/Robot/robotframework-appium-sample/tests/Open_Application.robot">
+<test id="s1-t1" name="Open_Application and Login Successfull" line="15">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=fe2622df</arg>
+<arg>appPackage=com.picpay.debug</arg>
+<arg>appActivity=com.picpay.features.enter.PicPayEnterActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<arg>appWaitForLaunch=false</arg>
+<arg>platformVersion=11.0</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20230124 12:54:45.930" level="TRACE">Arguments: [ 'http://localhost:4723/wd/hub' | platformName='Android' | deviceName='fe2622df' | appPackage='com.picpay.debug' | appActivity='com.picpay.features.enter.PicPayEnterActivity' | automationName='Uiautomator2' | appWaitForLaunch='false' | platformVersion='11.0' ]</msg>
+<msg timestamp="20230124 12:54:45.930" level="DEBUG">POST http://localhost:4723/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:deviceName": "fe2622df", "appium:appPackage": "com.picpay.debug", "appium:appActivity": "com.picpay.features.enter.PicPayEnterActivity", "appium:automationName": "Uiautomator2", "appium:appWaitForLaunch": "false", "appium:platformVersion": "11.0"}}}</msg>
+<msg timestamp="20230124 12:54:45.930" level="DEBUG">Starting new HTTP connection (1): localhost:4723</msg>
+<msg timestamp="20230124 12:54:54.490" level="DEBUG">http://localhost:4723 "POST /wd/hub/session HTTP/1.1" 200 995</msg>
+<msg timestamp="20230124 12:54:54.491" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","deviceName":"fe2622df","appPackage":"com.picpay.debug","appActivity":"com.picpay.features.enter.PicPayEnterActivity","automationName":"Uiautomator2","appWaitForLaunch":false,"platformVersion":"11.0"},"platformName":"Android","deviceName":"fe2622df","appPackage":"com.picpay.debug","appActivity":"com.picpay.features.enter.PicPayEnterActivity","automationName":"Uiautomator2","appWaitForLaunch":false,"platformVersion":"11","deviceUDID":"fe2622df","deviceApiLevel":30,"deviceScreenSize":"1080x2400","deviceScreenDensity":440,"deviceModel":"Redmi Note 9S","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":102,"viewportRect":{"left":0,"top":102,"width":1080,"height":2152}},"sessionId":"1526361e-68ff-4543-a997-e9473ec29e51"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '995', 'ETag': 'W/"3e3-hSlvnwLLrKwEiVsc1a0XBKwdEO8"', 'Date': 'Tue, 24 Jan 2023 15:54:54 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:54:54.491" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:54:54.493" level="DEBUG">Opened application with session id 1526361e-68ff-4543-a997-e9473ec29e51</msg>
+<msg timestamp="20230124 12:54:54.493" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20230124 12:54:45.930" endtime="20230124 12:54:54.493"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230124 12:54:54.493" level="TRACE">Arguments: [ '10s' ]</msg>
+<msg timestamp="20230124 12:55:04.494" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20230124 12:55:04.494" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:54:54.493" endtime="20230124 12:55:04.494"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${LOGIN-NAVIGATION-BUTTON1}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 12:55:04.496" level="TRACE">Arguments: [ 'com.picpay.debug:id/newLoginButton' ]</msg>
+<msg timestamp="20230124 12:55:04.497" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/newLoginButton"}</msg>
+<msg timestamp="20230124 12:55:04.585" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:04.586" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:04 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:04.586" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:04.788" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/newLoginButton"}</msg>
+<msg timestamp="20230124 12:55:04.832" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:04.832" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:04 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:04.832" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:05.035" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/newLoginButton"}</msg>
+<msg timestamp="20230124 12:55:05.127" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:05.127" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:05 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:05.127" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:05.333" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/newLoginButton"}</msg>
+<msg timestamp="20230124 12:55:05.847" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:05.848" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0370-ffff-ffff00000017","ELEMENT":"00000000-0000-0370-ffff-ffff00000017"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-rImbpcdl4XIyKxo7kzdpuF/FunU"', 'Date': 'Tue, 24 Jan 2023 15:55:05 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:05.849" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:05.849" level="INFO">criteria is com.picpay.debug:id/newLoginButton
+criteria is com.picpay.debug:id/newLoginButton
+criteria is com.picpay.debug:id/newLoginButton
+criteria is com.picpay.debug:id/newLoginButton</msg>
+<msg timestamp="20230124 12:55:05.849" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:04.495" endtime="20230124 12:55:05.849"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN-NAVIGATION-BUTTON2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 12:55:05.850" level="TRACE">Arguments: [ "//android.widget.Button[@resource-id='com.picpay.debug:id/newLoginButton']" ]</msg>
+<msg timestamp="20230124 12:55:05.852" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.picpay.debug:id/newLoginButton']'.</msg>
+<msg timestamp="20230124 12:55:05.853" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.Button[@resource-id='com.picpay.debug:id/newLoginButton']"}</msg>
+<msg timestamp="20230124 12:55:06.137" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:06.137" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0370-ffff-ffff00000017","ELEMENT":"00000000-0000-0370-ffff-ffff00000017"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-rImbpcdl4XIyKxo7kzdpuF/FunU"', 'Date': 'Tue, 24 Jan 2023 15:55:06 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:06.137" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:06.137" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0370-ffff-ffff00000017/click {"id": "00000000-0000-0370-ffff-ffff00000017"}</msg>
+<msg timestamp="20230124 12:55:06.233" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0370-ffff-ffff00000017/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230124 12:55:06.233" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 24 Jan 2023 15:55:06 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:06.233" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:06.233" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.picpay.debug:id/newLoginButton']</msg>
+<msg timestamp="20230124 12:55:06.233" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:05.850" endtime="20230124 12:55:06.233"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${INPUT-CPF-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 12:55:06.233" level="TRACE">Arguments: [ "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']" ]</msg>
+<msg timestamp="20230124 12:55:06.233" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']"}</msg>
+<msg timestamp="20230124 12:55:06.902" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:06.902" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:06 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:06.903" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:07.107" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']"}</msg>
+<msg timestamp="20230124 12:55:08.153" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:08.154" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0371-ffff-ffff00000048","ELEMENT":"00000000-0000-0371-ffff-ffff00000048"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-Z9ZCY7Pdm2Td/42VjJhILN8tCSc"', 'Date': 'Tue, 24 Jan 2023 15:55:08 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:08.154" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:08.155" level="INFO">xpath criteria: //android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']
+xpath criteria: //android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']</msg>
+<msg timestamp="20230124 12:55:08.155" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:06.233" endtime="20230124 12:55:08.155"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${INPUT-CPF-BUTTON}</arg>
+<arg>54663366104</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 12:55:08.156" level="TRACE">Arguments: [ "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']" | '54663366104' ]</msg>
+<msg timestamp="20230124 12:55:08.161" level="INFO">Typing text '54663366104' into text field '//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']'</msg>
+<msg timestamp="20230124 12:55:08.162" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']"}</msg>
+<msg timestamp="20230124 12:55:08.816" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:08.816" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0371-ffff-ffff00000048","ELEMENT":"00000000-0000-0371-ffff-ffff00000048"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-Z9ZCY7Pdm2Td/42VjJhILN8tCSc"', 'Date': 'Tue, 24 Jan 2023 15:55:08 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:08.816" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:08.816" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff00000048/value {"text": "54663366104", "value": ["5", "4", "6", "6", "3", "3", "6", "6", "1", "0", "4"], "id": "00000000-0000-0371-ffff-ffff00000048"}</msg>
+<msg timestamp="20230124 12:55:08.908" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff00000048/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20230124 12:55:08.909" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 24 Jan 2023 15:55:08 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:08.909" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:08.910" level="INFO">xpath criteria: //android.widget.EditText[@resource-id='com.picpay.debug:id/editTextUsername']</msg>
+<msg timestamp="20230124 12:55:08.910" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:08.155" endtime="20230124 12:55:08.910"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${INPUT-PASSWORD-BUTTON}</arg>
+<arg>47586900</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 12:55:08.911" level="TRACE">Arguments: [ "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextPassword']" | '47586900' ]</msg>
+<msg timestamp="20230124 12:55:08.917" level="INFO">Typing text '47586900' into text field '//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextPassword']'</msg>
+<msg timestamp="20230124 12:55:08.918" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.EditText[@resource-id='com.picpay.debug:id/editTextPassword']"}</msg>
+<msg timestamp="20230124 12:55:09.500" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:09.501" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0371-ffff-ffff00000054","ELEMENT":"00000000-0000-0371-ffff-ffff00000054"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-k/r1xo4NVAZygPgI8K+jjD1PLIo"', 'Date': 'Tue, 24 Jan 2023 15:55:09 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:09.501" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:09.501" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff00000054/value {"text": "47586900", "value": ["4", "7", "5", "8", "6", "9", "0", "0"], "id": "00000000-0000-0371-ffff-ffff00000054"}</msg>
+<msg timestamp="20230124 12:55:09.591" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff00000054/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20230124 12:55:09.592" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 24 Jan 2023 15:55:09 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:09.593" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:09.593" level="INFO">xpath criteria: //android.widget.EditText[@resource-id='com.picpay.debug:id/editTextPassword']</msg>
+<msg timestamp="20230124 12:55:09.593" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:08.911" endtime="20230124 12:55:09.593"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN-ENTER-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 12:55:09.594" level="TRACE">Arguments: [ "//android.widget.Button[@resource-id='com.picpay.debug:id/apolloButtonEnter']" ]</msg>
+<msg timestamp="20230124 12:55:09.599" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.picpay.debug:id/apolloButtonEnter']'.</msg>
+<msg timestamp="20230124 12:55:09.600" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.Button[@resource-id='com.picpay.debug:id/apolloButtonEnter']"}</msg>
+<msg timestamp="20230124 12:55:10.185" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:10.185" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0371-ffff-ffff0000005d","ELEMENT":"00000000-0000-0371-ffff-ffff0000005d"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-F/vWMRvhMkJTZe+3X2T/f6OyZq8"', 'Date': 'Tue, 24 Jan 2023 15:55:10 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:10.185" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:10.186" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff0000005d/click {"id": "00000000-0000-0371-ffff-ffff0000005d"}</msg>
+<msg timestamp="20230124 12:55:10.273" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0371-ffff-ffff0000005d/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230124 12:55:10.273" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 24 Jan 2023 15:55:10 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:10.274" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:10.274" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.picpay.debug:id/apolloButtonEnter']</msg>
+<msg timestamp="20230124 12:55:10.274" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:09.594" endtime="20230124 12:55:10.274"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${LOGIN-BIOMETRI-AUTHENTICATOR-DIALOG}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 12:55:10.275" level="TRACE">Arguments: [ 'com.picpay.debug:id/container' ]</msg>
+<msg timestamp="20230124 12:55:10.275" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:10.392" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:10.392" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:10 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:10.392" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:10.598" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:10.932" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:10.933" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:10 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:10.933" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:11.134" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:11.155" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:11.156" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:11 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:11.156" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:11.362" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:11.393" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:11.394" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:11 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:11.394" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:11.597" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:12.070" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:12.071" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:12 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:12.071" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:12.275" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:12.326" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:12.326" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:12 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:12.327" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:12.532" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:12.594" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 12</msg>
+<msg timestamp="20230124 12:55:12.595" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '12', 'ETag': 'W/"c-ct3goOI+b+kRZv2R9j2fTtMXwkk"', 'Date': 'Tue, 24 Jan 2023 15:55:12 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:12.595" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:12.799" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "id", "value": "com.picpay.debug:id/container"}</msg>
+<msg timestamp="20230124 12:55:13.820" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:13.821" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0373-ffff-ffff00000084","ELEMENT":"00000000-0000-0373-ffff-ffff00000084"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-BXd6YIQ+UlRaYD/iWY1fGItEMiA"', 'Date': 'Tue, 24 Jan 2023 15:55:13 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:13.821" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:13.821" level="INFO">criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container
+criteria is com.picpay.debug:id/container</msg>
+<msg timestamp="20230124 12:55:13.821" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:10.274" endtime="20230124 12:55:13.822"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN-BIOMETRI-AUTHENTICATOR-DIALOG-NOT-NOW-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 12:55:13.823" level="TRACE">Arguments: [ '//android.widget.TextView[@resource-id=\'com.picpay.debug:id/textViewMessageButton\' and @text="Agora não"]' ]</msg>
+<msg timestamp="20230124 12:55:13.827" level="INFO">Clicking element '//android.widget.TextView[@resource-id='com.picpay.debug:id/textViewMessageButton' and @text="Agora não"]'.</msg>
+<msg timestamp="20230124 12:55:13.828" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements {"using": "xpath", "value": "//android.widget.TextView[@resource-id='com.picpay.debug:id/textViewMessageButton' and @text=\"Agora n\u00e3o\"]"}</msg>
+<msg timestamp="20230124 12:55:13.951" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/elements HTTP/1.1" 200 139</msg>
+<msg timestamp="20230124 12:55:13.952" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0373-ffff-ffff00000095","ELEMENT":"00000000-0000-0373-ffff-ffff00000095"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-tV5LypEqN06SOCitCg6f2n9zrJI"', 'Date': 'Tue, 24 Jan 2023 15:55:13 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:13.952" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:13.953" level="DEBUG">POST http://localhost:4723/wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0373-ffff-ffff00000095/click {"id": "00000000-0000-0373-ffff-ffff00000095"}</msg>
+<msg timestamp="20230124 12:55:14.054" level="DEBUG">http://localhost:4723 "POST /wd/hub/session/1526361e-68ff-4543-a997-e9473ec29e51/element/00000000-0000-0373-ffff-ffff00000095/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20230124 12:55:14.055" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Tue, 24 Jan 2023 15:55:14 GMT', 'Connection': 'keep-alive'})</msg>
+<msg timestamp="20230124 12:55:14.055" level="DEBUG">Finished Request</msg>
+<msg timestamp="20230124 12:55:14.055" level="INFO">xpath criteria: //android.widget.TextView[@resource-id='com.picpay.debug:id/textViewMessageButton' and @text="Agora não"]</msg>
+<msg timestamp="20230124 12:55:14.055" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20230124 12:55:13.822" endtime="20230124 12:55:14.056"/>
+</kw>
+<status status="PASS" starttime="20230124 12:54:45.929" endtime="20230124 12:55:14.056"/>
+</test>
+<status status="PASS" starttime="20230124 12:54:45.864" endtime="20230124 12:55:14.060"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Open Application">Open Application</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
